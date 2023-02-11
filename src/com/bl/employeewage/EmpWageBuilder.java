@@ -2,30 +2,37 @@ package com.bl.employeewage;
 
 public class EmpWageBuilder
 {
-    public static void employeeAttendace() {
 
-        int IS_PRESENT = 1;
 
-        double empCheck = Math.floor((Math.random() * 10) % 2);  //using random method for random no
+        public static final int IS_PRESENT = 1;
+        public static final int SALARY_PER_HR = 20;
+
+        public static void employeeAttendace() {
+
+            double empCheck = Math.floor((Math.random() * 10) % 2);
+
+            int Working_Hr = 0;
 
         /*
-         * check employee is present or absent
+        checking condition
          */
 
-        if (empCheck == IS_PRESENT) {
+            if (empCheck == IS_PRESENT) {
 
-            System.out.println("Employee is Present");
+                Working_Hr = 8;
+
+            }
+
+            double Salary = Working_Hr * SALARY_PER_HR;
+
+            System.out.println("Employee Salary is = " + Salary + "  Doller");
 
         }
-        else
+
+
+        public static void main(String[] args)
         {
-            System.out.println("Employee is Absent");
+            EmpWageBuilder.employeeAttendace();  //main method
         }
+
     }
-
-
-    public static void main(String[] args) {
-
-        EmpWageBuilder.employeeAttendace(); //main method
-    }
-}
